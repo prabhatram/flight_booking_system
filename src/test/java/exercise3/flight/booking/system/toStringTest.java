@@ -16,7 +16,7 @@ import org.junit.Test;
 /**
  * Unit test for simple App.
  */
-public class FlightBookingTest 
+public class toStringTest 
 {
     private final PrintStream standardOut = System.out;
     private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
@@ -66,59 +66,6 @@ public class FlightBookingTest
         String answer = testString.toLowerCase().trim().replace(" ", "");
         String output = outputStreamCaptor.toString().toLowerCase().trim().replace(" ", "");
         assertEquals(answer, output);
-    }
-
-    @Test
-    public void testConstructor() {
-        System.out.println("Testing your Constructor and that it has the necessary parameters:");
-        
-        String sdepart = "2023-03-12";
-        LocalDate depart = LocalDate.parse(sdepart);
-
-        String sreturn = "2023-03-14";
-        LocalDate returnDate = LocalDate.parse(sreturn);
-
-        FlightBooking fb = new FlightBooking("null", depart, returnDate, 2, 3);
-        assertEquals("null", fb.getPassengerFullName());
-        assertEquals(depart, fb.getDepartingDate());
-        assertEquals(returnDate, fb.getReturnDate());
-        assertEquals(2, fb.getChildrenPassengers());
-        assertEquals(3, fb.getAdultPassengers());
-    }
-
-
-    @Test
-    public void testGetTotalPassengers() {
-        System.out.println("Testing the logic for calculating total passengers:");
-
-        String sdepart = "2023-03-12";
-        LocalDate depart = LocalDate.parse(sdepart);
-
-        String sreturn = "2023-03-14";
-        LocalDate returnDate = LocalDate.parse(sreturn);
-
-        FlightBooking fb = new FlightBooking("null", depart, returnDate, 1, 3);
-        int expResult = 4;
-        fb.setTotalPassengers(1,3);
-        int result = fb.getTotalPassengers();
-        assertEquals(expResult, result);
-    }
-
-    @Test
-    public void testGetTotalTicketPrice() {
-        System.out.println("Testing the logic for calculating total ticket price:");
-
-        String sdepart = "2023-03-12";
-        LocalDate depart = LocalDate.parse(sdepart);
-
-        String sreturn = "2023-03-14";
-        LocalDate returnDate = LocalDate.parse(sreturn);
-
-        FlightBooking fb = new FlightBooking("null", depart, returnDate, 1, 3);
-        int expResult = 4;
-        fb.setTotalPassengers(1,3);
-        int result = fb.getTotalPassengers();
-        assertEquals(expResult, result);
     }
     
 }
