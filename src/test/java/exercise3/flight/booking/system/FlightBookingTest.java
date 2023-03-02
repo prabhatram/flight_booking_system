@@ -47,7 +47,7 @@ public class FlightBookingTest
 
         String passengerFullName = fb.getPassengerFullName();
         String company = fb.getFlightCompany();
-        LocalDate departure = fb.getDepartingDate();
+        LocalDate departure = fb.getDepartureDate();
         LocalDate returningDate = fb.getReturnDate();
         String source = fb.getTripSource();
         String destination = fb.getTripDestination();
@@ -80,9 +80,9 @@ public class FlightBookingTest
 
         FlightBooking fb = new FlightBooking("null", depart, returnDate, 2, 3);
         assertEquals("null", fb.getPassengerFullName());
-        assertEquals(depart, fb.getDepartingDate());
+        assertEquals(depart, fb.getDepartureDate());
         assertEquals(returnDate, fb.getReturnDate());
-        assertEquals(2, fb.getChildrenPassengers());
+        assertEquals(2, fb.getChildPassengers());
         assertEquals(3, fb.getAdultPassengers());
     }
 
