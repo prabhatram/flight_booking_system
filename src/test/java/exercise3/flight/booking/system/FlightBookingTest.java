@@ -56,7 +56,8 @@ public class FlightBookingTest
 
         
         String testString = "Dear " + passengerFullName + ". Thank you for booking your flight with " + 
-        company + ". Following are the details of your booking and the trip:" + "\n" + 
+        company + "." + "\n" +
+        "Following are the details of your booking and the trip:" + "\n" + 
         "Ticket Number: " + ticketNumber + "\n" + 
         "From " + source + " to " + destination + "\n" +
         "Date of departure: " + departure + "\n" +
